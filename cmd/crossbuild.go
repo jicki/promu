@@ -31,9 +31,11 @@ import (
 	"github.com/prometheus/promu/util/sh"
 )
 
-var (
-	dockerBuilderImageName = "quay.io/prometheus/golang-builder"
+const (
+	defaultDockerBuilderImage = "quay.io/prometheus/golang-builder"
+)
 
+var (
 	defaultPlatforms = []string{
 		"aix/ppc64",
 		"darwin/amd64",
@@ -126,10 +128,11 @@ func runCrossbuild() {
 		allPlatforms     []string
 		unknownPlatforms []string
 
-		cgo       = config.Go.CGo
-		goVersion = config.Go.Version
-		repoPath  = config.Repository.Path
-		platforms = config.Crossbuild.Platforms
+		cgo                    = config.Go.CGo
+		goVersion              = config.Go.Version
+		repoPath               = config.Repository.Path
+		platforms              = config.Crossbuild.Platforms
+		dockerBuilderImageName = config.Crossbuild.DockerBuilderImage
 
 		dockerBaseBuilderImage = fmt.Sprintf("%s:%s-base", dockerBuilderImageName, goVersion)
 		dockerMainBuilderImage = fmt.Sprintf("%s:%s-main", dockerBuilderImageName, goVersion)

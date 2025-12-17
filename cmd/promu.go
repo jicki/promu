@@ -53,7 +53,8 @@ type Config struct {
 		Static     bool
 	}
 	Crossbuild struct {
-		Platforms []string
+		Platforms          []string
+		DockerBuilderImage string `yaml:"docker_builder_image"`
 	}
 	Repository struct {
 		Path string
@@ -76,6 +77,7 @@ func NewConfig() *Config {
 	config.Build.Prefix = "."
 	config.Build.Static = true
 	config.Crossbuild.Platforms = defaultPlatforms
+	config.Crossbuild.DockerBuilderImage = defaultDockerBuilderImage
 	config.Tarball.Prefix = "."
 	config.Go.Version = "1.12"
 	config.Go.CGo = false

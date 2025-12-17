@@ -33,6 +33,7 @@ func runCodeSign(binaryPath string) {
 func codeSignGoBinary(binaryPath string) {
 	var (
 		goVersion              = config.Go.Version
+		dockerBuilderImageName = config.Crossbuild.DockerBuilderImage
 		dockerMainBuilderImage = fmt.Sprintf("%s:%s-main", dockerBuilderImageName, goVersion)
 		mountPath              = fmt.Sprintf("/%s", filepath.Base(binaryPath))
 		mountPathConcat        = fmt.Sprintf("%s:%s", binaryPath, mountPath)
