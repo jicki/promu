@@ -27,8 +27,8 @@ import (
 
 	kingpin "github.com/alecthomas/kingpin/v2"
 
-	"github.com/prometheus/promu/pkg/repository"
-	"github.com/prometheus/promu/util/sh"
+	"github.com/jicki/promu/pkg/repository"
+	"github.com/jicki/promu/util/sh"
 )
 
 const (

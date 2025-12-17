@@ -14,7 +14,7 @@
 
 package main
 
-import "github.com/prometheus/promu/cmd"
+import "github.com/jicki/promu/cmd"
 
 func main() {
 	cmd.Execute()

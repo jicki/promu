@@ -1,4 +1,4 @@
-module github.com/prometheus/promu
+module github.com/jicki/promu
 
 go 1.24.0
 

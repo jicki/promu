@@ -26,8 +26,8 @@ import (
 	"github.com/google/go-github/v25/github"
 	"golang.org/x/oauth2"
 
-	"github.com/prometheus/promu/pkg/changelog"
-	"github.com/prometheus/promu/util/retry"
+	"github.com/jicki/promu/pkg/changelog"
+	"github.com/jicki/promu/util/retry"
 )
 
 var (

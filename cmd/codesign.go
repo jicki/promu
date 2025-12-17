@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/prometheus/promu/util/sh"
+	"github.com/jicki/promu/util/sh"
 )
 
 var (

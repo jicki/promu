@@ -3,7 +3,7 @@ go:
     # .circle/config.yml should also be updated.
     version: 1.25
 repository:
-    path: github.com/prometheus/promu
+    path: github.com/jicki/promu
 build:
     tags:
       all: [netgo, static_build]

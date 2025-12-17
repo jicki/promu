@@ -28,7 +28,7 @@ import (
 	kingpin "github.com/alecthomas/kingpin/v2"
 	"go.uber.org/atomic"
 
-	"github.com/prometheus/promu/util/sh"
+	"github.com/jicki/promu/util/sh"
 )
 
 const (

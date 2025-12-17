@@ -21,7 +21,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/prometheus/promu/pkg/changelog"
+	"github.com/jicki/promu/pkg/changelog"
 )
 
 var (
